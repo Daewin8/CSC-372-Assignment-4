@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+section {
+    margin: 30px auto;
+    padding: 20px;
+    width: 60%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+figure {
+    cursor: pointer;
+}
+
+figure img {
+    width: 120px;
+    height: 120px;
+}
+
+.selected {
+    border: 3px solid blue;
+}
+
+#computer-section img {
+    width: 150px;
+    height: 150px;
+}
+
+#countdown {
+    font-size: 20px;
+    font-weight: bold;
+    height: 25px;
+}
