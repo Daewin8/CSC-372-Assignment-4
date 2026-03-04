@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const computerImage = document.getElementById("computer-image");
     const computerCaption = document.getElementById("computer-caption");
     const resultText = document.getElementById("result-text");
-    const countdownText = document.getElementById("countdown");
 
     const choices = ["rock", "paper", "scissors"];
 
@@ -15,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             figure.classList.add("selected");
 
             const playerChoice = figure.getAttribute("data-choice");
+
             computerTurn(playerChoice);
         });
     });
@@ -27,27 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function computerTurn(playerChoice) {
 
-        let timeLeft = 3;
-        countdownText.textContent = timeLeft;
+        resultText.textContent = "Computer is thinking...";
 
-        const timer = setInterval(function () {
+        let shuffleCount = 0;
 
-            timeLeft--;
-            countdownText.textContent = timeLeft;
+        const shuffleInterval = setInterval(function () {
 
-            if (timeLeft === 0) {
-                clearInterval(timer);
+            const randomChoice = choices[Math.floor(Math.random() * 3)];
+            computerImage.src = "images/" + randomChoice + ".png";
+            computerCaption.textContent = randomChoice;
 
-                countdownText.textContent = "";
+            shuffleCount++;
 
-                const computerChoice = choices[Math.floor(Math.random() * 3)];
-                computerImage.src = "images/" + computerChoice + ".png";
-                computerCaption.textContent = computerChoice;
+        }, 500);
 
-                determineWinner(playerChoice, computerChoice);
-            }
+        setTimeout(function () {
 
-        }, 1000);
+            clearInterval(shuffleInterval);
+
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+            computerImage.src = "images/" + computerChoice + ".png";
+            computerCaption.textContent = computerChoice;
+
+            determineWinner(playerChoice, computerChoice);
+
+        }, 3000);
     }
 
     function determineWinner(player, computer) {
