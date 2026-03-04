@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<header>
-    <h1>Rock Paper Scissors</h1>
-</header>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
 
-<main>
+    <main>
+        <section id="player-section">
+            <h2>Your Throw</h2>
+            <div class="choices">
+                <figure data-choice="rock">
+                    <img src="images/rock.png" alt="Rock">
+                    <figcaption>Rock</figcaption>
+                </figure>
 
-    <!-- Player Section -->
-    <section id="player-section">
-        <h2>Your Throw</h2>
-        <div class="choices">
-            <figure data-choice="rock">
-                <img src="images/rock.png" alt="Rock">
-                <figcaption>Rock</figcaption>
+                <figure data-choice="paper">
+                    <img src="images/paper.png" alt="Paper">
+                    <figcaption>Paper</figcaption>
+                </figure>
+
+                <figure data-choice="scissors">
+                    <img src="images/scissors.png" alt="Scissors">
+                    <figcaption>Scissors</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="computer-section">
+            <h2>Computer Throw</h2>
+            <p id="countdown"></p>
+            <figure>
+                <img id="computer-image" src="images/question.png" alt="Computer Choice">
+                <figcaption id="computer-caption">?</figcaption>
             </figure>
+        </section>
 
-            <figure data-choice="paper">
-                <img src="images/paper.png" alt="Paper">
-                <figcaption>Paper</figcaption>
-            </figure>
+        <section id="outcome-section">
+            <h2>Outcome</h2>
+            <p id="result-text">Make your move!</p>
+        </section>
 
-            <figure data-choice="scissors">
-                <img src="images/scissors.png" alt="Scissors">
-                <figcaption>Scissors</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Computer Section -->
-    <section id="computer-section">
-        <h2>Computer Throw</h2>
-        <p id="countdown"></p>
-        <figure>
-            <img id="computer-image" src="images/question.png" alt="Computer Choice">
-            <figcaption id="computer-caption">?</figcaption>
-        </figure>
-    </section>
-
-    <!-- Outcome Section -->
-    <section id="outcome-section">
-        <h2>Outcome</h2>
-        <p id="result-text">Make your move!</p>
-    </section>
-
-</main>
+    </main>
 
 </body>
+
 </html>
