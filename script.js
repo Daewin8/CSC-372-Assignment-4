@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const shuffleInterval = setInterval(function () {
 
             const randomChoice = choices[Math.floor(Math.random() * 3)];
-            computerImage.src = "images/" + randomChoice + ".png";
+            computerImage.src = "images/" + randomChoice + ".PNG";
             computerCaption.textContent = randomChoice;
 
             shuffleCount++;
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(shuffleInterval);
 
             const computerChoice = choices[Math.floor(Math.random() * 3)];
-            computerImage.src = "images/" + computerChoice + ".png";
+            computerImage.src = "images/" + computerChoice + ".PNG";
             computerCaption.textContent = computerChoice;
 
             determineWinner(playerChoice, computerChoice);
